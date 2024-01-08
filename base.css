@@ -1,0 +1,67 @@
+/* css used everywhere */
+
+:root {
+  /* colors */
+  --background: #10121C;
+  
+  --primary: #57dbff;
+  --primary-hover: #80e3ff;
+  
+  --elevated: #1F2437;
+  --elevated-hover: #2c2c2e;
+  
+  --side-1: #273447;
+  --side-2: #273447;
+  
+  --text: white;
+  --mono: #1F2437;
+
+  /* fonts */
+  --primary-font: "Inter", system-ui;
+  --code-font: "JetBrains Mono", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: var(--primary-font)
+}
+
+button:hover,
+button:focus {
+  background-color: var(--primary-hover);
+  transition: background-color .5s ease-in-out;
+}
+
+/* Variables */
+
+/* :root {
+  --background: 273447;
+  --primary: #007aff;
+  --elevated: white;
+  --elevated-hover: #e6e6eb;
+  --side-1: rgb(229, 229, 234);
+  --side-2: rgb(209, 209, 214);
+  --text: black;
+  --mono: white;
+
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --primary: #0a84ff;
+    --elevated: rgb(28, 28, 30);
+    --elevated-hover: #2c2c2e;
+    --side-1: rgb(44, 44, 46);
+    --side-2: rgb(28, 28, 30);
+    --text: white;
+    --mono: black;
+  }
+}
+*/

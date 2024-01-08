@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cablecord Login</title>
+  <script>
+    if (localStorage.getItem("token")) {
+      location.href = "/app.html"
+    }
+  </script>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css"
+    onerror='this.href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"'>
+  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/base.css">
+  <script src="/lib/rest.js"></script>
+  <script src="/lib/constants.js"></script>
+  <script src="/lib/helpers.js"></script>
+  <script src="/lib/renderers.js"></script>
+  <script src="https://cordcutters.github.io/markcord/markcord.js"></script>
+  <link href="https://cordcutters.github.io/markcord/style.css" rel="stylesheet" type="text/css" />
+  <!-- import markcord (md parser) -->
+  <script src="/login.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#252525">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+</head>
+
+<body>
+  <div id="wrap">
+
+
+    <div id="login">
+      Input your Discord token here <br><span style="opacity: .5; font-size: .85rem;">(The token gets sent directly to
+        Discord's servers, we
+        cannot see it)</span>
+      <input id="cordtoken" type="password">
+      <button id="log">Sign in</button>
+    </div>
+
+    <dialog id="error">
+      <div class="dialog-body">
+        <h1 id="error-text"></h1>
+        <button onclick="this.parentNode.parentNode.close()">OK</button>
+      </div>
+    </dialog>
+
+
+    <h1 id="welcome-back" style="display:none;"></h1>
+    <button id="login-continue" style="display:none;">CONTINUE</button>
+
+
+  </div>
+</body>
+
+</html>
